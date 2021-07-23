@@ -40,7 +40,7 @@ var WildRydes = window.WildRydes || {};
                     resolve(null);
                 } else {
                     resolve(session.getIdToken().getJwtToken());
-                }
+                } 
             });
         } else {
             resolve(null);
