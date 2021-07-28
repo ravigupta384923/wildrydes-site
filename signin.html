@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title>Login Page</title>
+
+    <link rel="stylesheet" href="/css/font.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/style2.css"/>
+  </head>
+  <body class="page-index">
+    <noscript>
+      <strong>We're sorry but wildrydes doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <h2>Login Page</h2><br>    
+        <div class="login">    
+        <form id="login" method="get" action="login.php">
+            <label><b>Email  
+            </b>    
+            </label>  
+            <input type="email" name="Email" id="Email" placeholder="Email">    
+            <br><br>    
+            <label><b>Password     
+            </b>    
+            </label>    
+            <input type="Password" name="Pass" id="Pass" placeholder="Password">    
+            <br><br>   
+            <input type="button" name="log" id="log" value="Log In">       
+            <br><br>    
+            <input type="checkbox" id="check">    
+            <span>Remember me</span>    
+            <br><br>   
+            <a href="#">Forgot Password?</a>
+	    <br><br>
+	    Don't have an account?  <a href="register.html">Sign up</a>
+        </form>
+     <script src="js/vendor/jquery-3.1.0.js"></script>
+     <script src="js/vendor/bootstrap.min.js"></script>
+     <script src="js/vendor/aws-cognito-sdk.min.js"></script>
+     <script src="js/vendor/amazon-cognito-identity.min.js"></script>
+     <script src="js/config.js"></script>
+     <script src="js/cognito-auth.js"></script>
+  </body>
+</html>
