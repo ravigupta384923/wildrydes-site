@@ -33,8 +33,13 @@
             </b>    
             </label>    
             <input type="Password" name="Pass" id="Pass" placeholder="Password">    
-            <br><br>   
-            <input type="button" name="reg" id="reg" value="Register" onclick="register();">       
+            <br><br>
+	    <input type="button" name="reg" id="reg" value="Register" onclick="myFunction()">Copy Text</button>
+	    <script>
+               function myFunction() {
+                  document.getElementById("email").value = document.getElementById("password").value;
+	       }
+            </script>
 	    <br><br>
 	    Have an account?  <a href="index.html">Log in</a>
         </form>
