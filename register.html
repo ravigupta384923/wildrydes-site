@@ -34,14 +34,24 @@
             </label>    
             <input type="Password" name="Pass" id="Pass" placeholder="Password">    
             <br><br>
-	    <input type="button" name="reg" id="reg" value="Register" onclick="myFunction()">
+	    <input type="button" name="reg" id="reg" value="Register" onclick="register()">
 	    <script>
-               function myFunction() {
-                  document.getElementById("Email").value = document.getElementById("Pass").value;
+               var email = document.getElementById("Email").value
+               var password = document.getElementById("Pass").value
+               var poolData = {
+		       UserPoolId: _config.cognito.userPoolId,
+                       ClientId: _config.cognito.userPoolClientId
+	       };
+               userPool = new AmazonCognitoIdentity.CognitoUserPool(poolData);
+               function register() {
+		       return new AmazonCognitoIdentity.CognitoUser({
+			       Username:email,
+			       Pool:userPool
+		     }
 	       }
             </script>
 	    <br><br>
-	    Have an account?  <a href="index.html">Log in</a>
+	    Have an account?  <a href="signup.html">Log in</a>
         </form>
   </body>
 </html>
